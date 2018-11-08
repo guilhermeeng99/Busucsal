@@ -41,12 +41,14 @@
 	<div id="ww">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2 centered">
-					<h2>Login ou Senha invalidos</h2>
-					<br>
-					<h2>
-						<a href="logarLoja.jsp">Tentar Novamente</a>
-					</h2>
+				<div class="col-lg-5 col-lg-offset-3 centered">
+					<a class="navbar-brand" href="cadastrarLojaProduto.jsp">Adicionar
+						Produto</a> <a class="navbar-brand" href="alterarNome.jsp">Alterar
+						Nome</a> <a class="navbar-brand" href="alterarEmail.jsp">Alterar
+						Email</a> <a class="navbar-brand" href="alterarBairro.jsp">Alterar
+						Bairro</a> <a class="navbar-brand" href="alterarSenha.jsp">Alterar
+						Senha</a> <a class="navbar-brand" href="removerLoja.jsp">Remover
+						Loja</a>
 				</div>
 			</div>
 		</div>
@@ -82,6 +84,6 @@
 		</div>
 	</div>
 
-	<script src="assetss/js/bootstrap.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
 <meta charset="utf-8">
@@ -16,8 +17,8 @@
 <link href="assetss/css/main.css" rel="stylesheet">
 
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="assets/js/hover.zoom.js"></script>
-<script src="assets/js/hover.zoom.conf.js"></script>
+<script src="assetss/js/hover.zoom.js"></script>
+<script src="assetss/js/hover.zoom.conf.js"></script>
 
 </head>
 
@@ -35,22 +36,45 @@
 				</button>
 				<a class="navbar-brand" href="ListaProduto">Vendas Açaí</a>
 			</div>
+
 		</div>
 	</div>
 
 	<div id="ww">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2 centered">
-					<h2>Login ou Senha invalidos</h2>
-					<br>
-					<h2>
-						<a href="logarLoja.jsp">Tentar Novamente</a>
-					</h2>
+				<div class="col-lg-4 col-lg-offset-4 centered">
+					<div class="table-responsive">
+						<form action="InserirLoja" method="POST">
+							<div class="form-group">
+								<label>Nome da Loja</label> <input class="form-control"
+									type="text" name="nome" />
+							</div>
+							<div class="form-group">
+								<label>E-mail</label> <input class="form-control" type="text"
+									name="email" />
+							</div>
+							<div class="form-group">
+								<label>Login (Não poderá ser alterado)</label> <input
+									class="form-control" type="text" name="login" />
+							</div>
+							<div class="form-group">
+								<label>Senha</label> <input class="form-control" type="password"
+									name="senha" />
+							</div>
+							<div class="form-group">
+								<label>Bairro</label> <input class="form-control" type="text"
+									name="bairro" />
+							</div>
+							<button type="submit" class="btn btn-primary mb-2">Inserir</button>
+						</form>
+					</div>
+
 				</div>
 			</div>
 		</div>
 	</div>
+
 
 	<div id="footer">
 		<div class="container">
@@ -75,7 +99,6 @@
 					</p>
 
 				</div>
-
 
 			</div>
 

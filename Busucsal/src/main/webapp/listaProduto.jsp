@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
 <meta charset="utf-8">
@@ -35,6 +36,12 @@
 				</button>
 				<a class="navbar-brand" href="ListaProduto">Vendas Açaí</a>
 			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="logarLoja.jsp">Logar Loja</a></li>
+					<li><a href="cadastrarLoja.jsp">Cadastrar Loja</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
@@ -42,11 +49,36 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2 centered">
-					<h2>Login ou Senha invalidos</h2>
-					<br>
-					<h2>
-						<a href="logarLoja.jsp">Tentar Novamente</a>
-					</h2>
+					<h2>Tabela de Produtos</h2>
+					<div class="table-responsive">
+						<table class="table table-bordered">
+
+							<tr>
+								<th>Id</th>
+								<th>Nome</th>
+								<th>Conteúdo</th>
+								<th>Gramas</th>
+								<th>Preço</th>
+							</tr>
+							<c:forEach var="l" items="${loja}">
+								<tr>
+									<td>Loja: ${l.nome}</td>
+
+								</tr>
+								<c:forEach var="p" items="${produto}">
+									<tr>
+										<td>${p.id}</td>
+										<td>${p.nome}</td>
+										<td>${p.conteudo}</td>
+										<td>${p.gramas}</td>
+										<td>${p.preco}</td>
+
+									</tr>
+								</c:forEach>
+							</c:forEach>
+						</table>
+					</div>
+
 				</div>
 			</div>
 		</div>
@@ -75,7 +107,6 @@
 					</p>
 
 				</div>
-
 
 			</div>
 

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
 <meta charset="utf-8">
@@ -35,22 +36,41 @@
 				</button>
 				<a class="navbar-brand" href="ListaProduto">Vendas Açaí</a>
 			</div>
+
 		</div>
 	</div>
 
 	<div id="ww">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2 centered">
-					<h2>Login ou Senha invalidos</h2>
-					<br>
-					<h2>
-						<a href="logarLoja.jsp">Tentar Novamente</a>
-					</h2>
+				<div class="col-lg-4 col-lg-offset-4 centered">
+					<div class="table-responsive">
+						<form action="InserirLojaProduto" method="POST">
+							<div class="form-group">
+								<label>Nome do Produto (Não poderá ser alterado)</label> <input class="form-control"
+									type="text" name="nome" />
+							</div>
+							<div class="form-group">
+								<label>Conteúdo</label> <input class="form-control" type="text"
+									name="conteudo" />
+							</div>
+							<div class="form-group">
+								<label>Gramas</label> <input class="form-control" type="text"
+									name="gramas" />
+							</div>
+							<div class="form-group">
+								<label>Preço</label> <input class="form-control" type="text"
+									name="preco" />
+							</div>
+							<button type="submit" class="btn btn-primary mb-2">Inserir</button>
+						</form>
+					</div>
+
 				</div>
 			</div>
 		</div>
 	</div>
+
 
 	<div id="footer">
 		<div class="container">
@@ -67,7 +87,6 @@
 				</div>
 				<div class="col-lg-6 ">
 					<p>
-						<a href="ListaLoja" target="_blank">Informações das Lojas</a><br>
 						<a href="https://github.com/guilhermeeng99/VendasAcai"
 							target="_blank">Repositório</a><br> Atividade realizada
 						atráves de conhecimentos adquiridos pelas matérias: WEB, Eng.
@@ -75,7 +94,6 @@
 					</p>
 
 				</div>
-
 
 			</div>
 

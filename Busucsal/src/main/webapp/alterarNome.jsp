@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
 <meta charset="utf-8">
@@ -35,22 +36,28 @@
 				</button>
 				<a class="navbar-brand" href="ListaProduto">Vendas Açaí</a>
 			</div>
+
 		</div>
 	</div>
 
 	<div id="ww">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2 centered">
-					<h2>Login ou Senha invalidos</h2>
-					<br>
-					<h2>
-						<a href="logarLoja.jsp">Tentar Novamente</a>
-					</h2>
+				<div class="col-lg-4 col-lg-offset-4 centered">
+					<div class="table-responsive">
+						<form action="AlterarNome" method="POST">
+							<div class="form-group">
+								<label>Nome</label> <input class="form-control" type="text"
+									name="nome" />
+							</div>
+							<button type="submit" class="btn btn-primary mb-2">Inserir</button>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 
 	<div id="footer">
 		<div class="container">
@@ -75,7 +82,6 @@
 					</p>
 
 				</div>
-
 
 			</div>
 

@@ -39,8 +39,8 @@ public class HSQLBanco implements ServletContextListener {
         try {
             System.out.println("Starting Database");
             HsqlProperties p = new HsqlProperties();
-            p.setProperty("server.database.0", "file:busucsal.db");
-            p.setProperty("server.dbname.0", "busucsal");
+            p.setProperty("server.database.0", "file:vendasAcai.db");
+            p.setProperty("server.dbname.0", "vendasAcai");
             p.setProperty("server.port", "9001");
             server = new Server();
             server.setProperties(p);

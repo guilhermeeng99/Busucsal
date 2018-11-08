@@ -2,11 +2,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.ucsal.busucsal</groupId>
-	<artifactId>Busucsal</artifactId>
+	<groupId>br.ucsal.vendasAcai</groupId>
+	<artifactId>Vendas_Acai</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>Busucsal</name>
+	<name>Vendas_Acai</name>
 
 	<properties>
 		<maven.compiler.target>1.8</maven.compiler.target>

@@ -42,11 +42,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2 centered">
-					<h2>Login ou Senha invalidos</h2>
-					<br>
-					<h2>
-						<a href="logarLoja.jsp">Tentar Novamente</a>
-					</h2>
+					<form action="RemoverLoja" method="post">
+						<h2>Confirmar Exclusão da Loja:</h2>
+						<br> <input type="password" name="senha" class="form-control"
+							placeholder="Senha"><br>
+						<button type="submit" class="btn btn-success">Confirmar</button>
+					</form>
 				</div>
 			</div>
 		</div>
