@@ -86,13 +86,13 @@ a:after {
 }
 
 .navbar-inverse {
-	padding-bottom: 70px;
-	padding-top: 70px;
+	padding-bottom: 30px;
+	padding-top: 25px;
 }
 
 .navbar-inverse {
-	background-color: #854d7d;
-	border-color: #854d7d;
+	background-color: #00ff40;
+	border-color: #00ff40;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -106,6 +106,12 @@ a:after {
 .navbar-brand {
 	font-weight: 700;
 	font-size: 20px;
+	letter-spacing: 2px;
+}
+
+.navbar-brand-mt {
+	font-weight: 500;
+	font-size: 15px;
 	letter-spacing: 2px;
 }
 
@@ -125,28 +131,13 @@ a:after {
 /* Helpers */
 
 .mt {
-	margin-top: 40px;
-	margin-bottom: 40px;
+	padding-top: 10px;
+	padding-bottom: 5px;
 }
 
 .pt {
-	padding-top: 50px;
-	padding-bottom: 50px;
-}
-
-.table-responsive{
-  width: 100% !important;
-}
-
-.table {
-    border: 1px solid black;
-    width: 50% !important; /*Importante manter o !important rs */
-    margin: auto;
-}
-
-.table-status {
-    margin-top: 20px;
-    margin-bottom: 20px !important;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 
@@ -161,8 +152,8 @@ a:after {
 
 #footer {
 	background-color: #2f2f2f;
-	padding-top: 50px;
-	padding-bottom: 50px; 
+	padding-top: 40px;
+	padding-bottom: 20px; 
 }
 
 #footer p {
@@ -190,64 +181,100 @@ a:after {
 	background-color: #ffffff;
 }
 
-
-
-/* Blog Date*/
-bd {
-	font-size: 12px;
-	text-transform: uppercase;
-	color: #d2d2d2;
-	font-weight: 700;
-}
-
-/* Blog Author*/
-ba {
-	font-size: 12px;
-	text-transform: uppercase;
-}
-
-/* Blog Quote */
-.bq {
-	font-size: 22px;
-	padding-top: 30px;
-}
-
-/* Blog Tags */
-bt {
-	font-size: 12px;
-}
-
-/* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
-/* Effects also are controled by hover.zoom.js */
-.zoom { 
-    display:block; 
-    position:relative; 
-    overflow:hidden; 
-    background:transparent url(../img/loader.gif) no-repeat center;
-}
-
-
-    .zoomOverlay {
-        position:absolute;
-        top:0; left:0;
-        bottom:0; right:0;
-        display:none;
-        background-image:url(../img/zoom.png);
-        background-repeat:no-repeat;
-        background-position:center;
-    }
-
-.zoom2 {
-	opacity: 1;
-}
-
-.zoom2:hover {
-	opacity: 0.5;
-}
-
 /* glyphicon Configuration */
 
 .glyphicon {
 	font-size: 40px;
 	color: #1abc9c;
+}
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+table * {
+  position: relative;
+}
+table td, table th {
+  padding-left: 8px;
+}
+table thead tr {
+  height: 60px;
+  background: #854d58;
+  font-size: 16px;
+}
+table tbody tr {
+  height: 48px;
+  border-bottom: 1px solid #E3F1D5;
+}
+table tbody tr:last-child {
+  border: 0;
+}
+table td, table th {
+  text-align: left;
+}
+table th {
+	color: #f2f2f2;
+
+	}
+table td.l, table th.l {
+  text-align: right;
+}
+table td.c, table th.c {
+  text-align: center;
+}
+table td.r, table th.r {
+  text-align: center;
+}
+
+@media screen and (max-width: 35.5em) {
+  table {
+    display: block;
+  }
+  table > *, table tr, table td, table th {
+    display: block;
+  }
+  table thead {
+    display: none;
+  }
+  table tbody tr {
+    height: auto;
+    padding: 8px 0;
+  }
+  table tbody tr td {
+    padding-left: 45%;
+    margin-bottom: 12px;
+  }
+  table tbody tr td:last-child {
+    margin-bottom: 0;
+  }
+  table tbody tr td:before {
+    position: absolute;
+    font-weight: 700;
+    width: 40%;
+    left: 10px;
+    top: 0;
+  }
+  table tbody tr td:nth-child(1):before {
+    content: "Code";
+  }
+  table tbody tr td:nth-child(2):before {
+    content: "Stock";
+  }
+  table tbody tr td:nth-child(3):before {
+    content: "Cap";
+  }
+  table tbody tr td:nth-child(4):before {
+    content: "Inch";
+  }
+
+blockquote {
+  color: white;
+  text-align: center;
 }
