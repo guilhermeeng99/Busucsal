@@ -44,7 +44,7 @@ p {
 
 /* Links */
 a {
-    color: #854d58;
+    color: #2193b0;
     word-wrap: break-word;
 
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -91,8 +91,8 @@ a:after {
 }
 
 .navbar-inverse {
-	background-color: #00ff40;
-	border-color: #00ff40;
+	background-color: #3b8d99;
+	border-color: #3b8d99;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -109,12 +109,6 @@ a:after {
 	letter-spacing: 2px;
 }
 
-.navbar-brand-mt {
-	font-weight: 500;
-	font-size: 15px;
-	letter-spacing: 2px;
-}
-
 .navbar-inverse .navbar-brand {
 	color: white;
 }
@@ -124,7 +118,7 @@ a:after {
 }
 
 .progress-bar-theme {
-  background-color: #400040;
+  background-color: #1abc9c;
 }
 
 
@@ -139,7 +133,6 @@ a:after {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-
 
 /* +++++ WRAP SECTIONS +++++ */
 
@@ -165,7 +158,6 @@ a:after {
 	text-transform: uppercase;
 	padding-bottom: 20px;
 }
-
 
 /* +++++ Color Wraps / Blog Page +++++ */
 
@@ -206,7 +198,7 @@ table td, table th {
 }
 table thead tr {
   height: 60px;
-  background: #854d58;
+  background: #2193b0;
   font-size: 16px;
 }
 table tbody tr {

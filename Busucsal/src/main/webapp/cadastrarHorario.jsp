@@ -6,13 +6,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="assetss/img/acai_icon.png">
+<link rel="shortcut icon" href="assets/img/busucsal_icon.png">
 
 <title>Busucsal</title>
 
-<link href="assetss/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/bootstrap.css" rel="stylesheet">
 
-<link href="assetss/css/main.css" rel="stylesheet">
+<link href="assets/css/main.css" rel="stylesheet">
 
 </head>
 
@@ -29,7 +29,7 @@
 						class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="ListarAdminHorarioRoteiroServlet"><img
-					src="assetss/img/acai_icon.png" alt="Icone Açaí" height="55"
+					src="assets/img/busucsal_icon.png" alt="Icone Busucsal" height="55"
 					width="55"> Busucsal</a>
 			</div>
 			<div class="navbar-collapse collapse">
@@ -64,7 +64,7 @@
 								<label>Roteiro</label> <input class="form-control" type="text"
 									name="roteiro" />
 							</div>
-							<button type="submit" class="btn btn-dark">Inserir</button>
+							<button type="submit" class="btn btn-primary">Inserir</button>
 						</form>
 					</div>
 
@@ -80,20 +80,21 @@
 
 				<div class="col-lg-5">
 					<h4>SOBRE O PROJETO:</h4>
-					<p>Um site de vendas de açaí interativo com os usuários, de
-						forma que os mesmos não precisem mais ir até o local de vendas ou
-						pegar filas para comprar o açaí, já que os usuários receberão em
-						casa.</p>
-
-
-				</div>
-				<div class="col-lg-6 ">
 					<h4>
-						<a href="https://github.com/guilhermeeng99/Vendas_Acai"
-							target="_blank">Repositório</a>
+						<a href="https://github.com/guilhermeeng99/Busucsal"
+							target="_blank">Repositrio</a>
 					</h4>
-					<p>Atividade realizada atráves de conhecimentos adquiridos
-						pelas matérias: WEB, Eng. Requisitos, Banco de Dados I</p>
+					<h4>
+						<a href="https://www.ucsal.br" target="_blank">Site UCSAL</a>
+					</h4>
+					<h4>Tel Ucsal: (71) 3203-8800</h4>
+				</div>
+				<div class="col-lg-6">
+					<p>Para melhoria da mobilidade, a UCSAL disponibilizou o
+						BUSUCSAL. As rotas e horrios esto disponveis na pgina da
+						Universidade e nos murais. Mas se uma viagem atrasar ou se for
+						necessria uma mudana de ltima hora, o que fazer? Onde consultar?
+						Agora voc acha tudo aqui!</p>
 
 				</div>
 
