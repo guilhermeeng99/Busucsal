@@ -38,7 +38,8 @@
 			<div class="row">
 				<div class="col-lg-4 col-lg-offset-4 centered">
 					<ul class="nav navbar-nav pt navbar-brand">
-						<li><a href="ListarHorarioRoteiroServlet">Ver Horários e Roteiros</a></li>
+						<li><a href="ListarHorarioRoteiroServlet">Ver Horários e
+								Roteiros</a></li>
 						<li><a href="LogarAdminServlet">Logar Administrador</a></li>
 					</ul>
 				</div>
@@ -46,35 +47,7 @@
 		</div>
 	</div>
 
-
-	<div id="footer">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-lg-5">
-					<h4>SOBRE O PROJETO:</h4>
-					<h4>
-						<a href="https://github.com/guilhermeeng99/Busucsal"
-							target="_blank">Repositrio</a>
-					</h4>
-					<h4>
-						<a href="https://www.ucsal.br" target="_blank">Site UCSAL</a>
-					</h4>
-					<h4>Tel Ucsal: (71) 3203-8800</h4>
-				</div>
-				<div class="col-lg-6">
-					<p>Para melhoria da mobilidade, a UCSAL disponibilizou o
-						BUSUCSAL. As rotas e horrios esto disponveis na pgina da
-						Universidade e nos murais. Mas se uma viagem atrasar ou se for
-						necessria uma mudana de ltima hora, o que fazer? Onde consultar?
-						Agora voc acha tudo aqui!</p>
-
-				</div>
-
-			</div>
-
-		</div>
-	</div>
+	<c:import url="rodape.jsp"></c:import>
 
 </body>
 </html>
