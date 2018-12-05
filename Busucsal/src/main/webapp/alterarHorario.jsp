@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@page import="br.ucsal.admin.model.Admin"%>
+<%@page import="br.ucsal.busucsal.model.Admin"%>
 <html>
 <head>
 <meta charset="utf-8">

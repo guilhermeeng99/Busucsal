@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@page import="br.ucsal.busucsal.model.Admin"%>
+<%@page import="br.ucsal.busucsal.model.Usuario"%>
 <html>
 <head>
 <meta charset="utf-8">
@@ -18,7 +18,7 @@
 
 <body>
 	<%
-		Admin adminLogin = (Admin) session.getAttribute("adminLogin");
+		Usuario usuarioLogin = (Usuario) session.getAttribute("usuarioLogin");
 	%>
 
 	<div class="navbar navbar-inverse navbar-static-top">
@@ -29,17 +29,17 @@
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="ListarAdminHorarioRoteiroServlet"><img
+				<a class="navbar-brand" href="ListarUsuarioHorarioRoteiroServlet"><img
 					src="assets/img/busucsal_icon.png" alt="Icone Busucsal" height="55"
 					width="55"> Busucsal</a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right pt navbar-brand">
-					<li><a href="ListarAdminHorarioRoteiroServlet"> <%
- 	out.print(adminLogin.getNome());
+					<li><a href="ListarUsuarioServlet"> <%
+ 	out.print(usuarioLogin.getNome());
  %>
 					</a></li>
-					<li><a href="LogarAdminServlet">Sair</a></li>
+					<li><a href="LogarUsuarioServlet">Sair</a></li>
 				</ul>
 			</div>
 		</div>
@@ -58,9 +58,6 @@
 								<th>Horário</th>
 								<th>Data</th>
 								<th>Roteiro</th>
-								<th>Alterar</th>
-								<th>Remover</th>
-								<th>Adicionar</th>
 							</tr>
 						<thead>
 						<tbody>
@@ -70,9 +67,6 @@
 									<td>${h.horario}</td>
 									<td>${h.data}</td>
 									<td>${h.roteiro}</td>
-									<td><a href="AlterarHorarioServlet?id=${h.id}">ALTERAR</a></td>
-									<td><a href="RemoverHorarioServlet?id=${h.id}">REMOVER</a></td>
-									<td><a href="cadastrarHorario.jsp">ADICIONAR</a></td>
 
 								</tr>
 							</c:forEach>
@@ -89,9 +83,6 @@
 								<th>Rota</th>
 								<th>Saída</th>
 								<th>Parada</th>
-								<th>Alterar</th>
-								<th>Remover</th>
-								<th>Adicionar</th>
 							</tr>
 						<thead>
 						<tbody>
@@ -101,9 +92,6 @@
 									<td>${r.rota}</td>
 									<td>${r.saida}</td>
 									<td>${r.parada}</td>
-									<td><a href="AlterarRoteiroServlet?id=${r.id}">ALTERAR</a></td>
-									<td><a href="RemoverRoteiroServlet?id=${r.id}">REMOVER</a></td>
-									<td><a href="cadastrarRoteiro.jsp">ADICIONAR</a></td>
 								</tr>
 							</c:forEach>
 						</tbody>

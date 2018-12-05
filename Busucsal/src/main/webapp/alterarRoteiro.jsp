@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@page import="br.ucsal.admin.model.Admin"%>
+<%@page import="br.ucsal.busucsal.model.Admin"%>
 <html>
 <head>
 <meta charset="utf-8">
@@ -51,7 +51,7 @@
 					<div class="table-responsive">
 						<h2>Alterar Roteiro</h2>
 						<br>
-						<form action="AlterarHorarioServlet" method="POST">
+						<form action="AlterarRoteiroServlet" method="POST">
 							<input type="hidden" name="id" value="${roteiro.id}">
 							<div class="form-group">
 								<label>Rota</label> <input class="form-control"

@@ -29,7 +29,11 @@
 					src="assets/img/busucsal_icon.png" alt="Icone Busucsal" height="55"
 					width="55"> Busucsal</a>
 			</div>
-
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right pt navbar-brand">
+					<li><a href="cadastrarUsuario.jsp">Cadastrar Usuário</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
@@ -37,11 +41,24 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4 col-lg-offset-4 centered">
-					<ul class="nav navbar-nav pt navbar-brand">
-						<li><a href="LogarUsuarioServlet">Logar Usuário</a></li>
-						<li><a href="cadastrarUsuario.jsp">Cadastrar Usuário</a></li>
-						<li><a href="LogarAdminServlet">Logar Administrador</a></li>
-					</ul>
+					<div class="table-responsive">
+						<h2>Logar Usuário</h2>
+						<br>
+						<form action="LogarUsuarioServlet" method="POST">
+
+							<div class="form-group">
+								<label>Login</label> <input class="form-control" type="text"
+									name="login" />
+							</div>
+							<div class="form-group">
+								<label>Senha</label> <input class="form-control" type="password"
+									name="senha" />
+							</div>
+
+							<button type="submit" class="btn btn-primary">Inserir</button>
+						</form>
+					</div>
+
 				</div>
 			</div>
 		</div>

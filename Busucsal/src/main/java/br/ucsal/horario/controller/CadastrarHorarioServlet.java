@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.ucsal.horario.model.Horario;
-import br.ucsal.horario.dao.HorarioDao;
+import br.ucsal.busucsal.dao.HorarioDao;
+import br.ucsal.busucsal.model.Horario;
 
 @WebServlet("/CadastrarHorarioServlet")
 public class CadastrarHorarioServlet extends HttpServlet {

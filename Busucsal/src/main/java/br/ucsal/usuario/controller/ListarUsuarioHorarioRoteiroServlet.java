@@ -1,4 +1,4 @@
-package br.ucsal.admin.controller;
+package br.ucsal.usuario.controller;
 
 import java.io.IOException;
 
@@ -12,11 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 import br.ucsal.busucsal.dao.HorarioDao;
 import br.ucsal.busucsal.dao.RoteiroDao;
 
-@WebServlet("/ListarHorarioRoteiroServlet")
-public class ListarHorarioRoteiroServlet extends HttpServlet {
+@WebServlet("/ListarUsuarioHorarioRoteiroServlet")
+public class ListarUsuarioHorarioRoteiroServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public ListarHorarioRoteiroServlet() {
+	public ListarUsuarioHorarioRoteiroServlet() {
 		super();
 	}
 
@@ -27,7 +27,7 @@ public class ListarHorarioRoteiroServlet extends HttpServlet {
 		
 		request.setAttribute("roteiro", roteiroDao.getLista());
 		request.setAttribute("horario", horarioDao.getLista());
-		RequestDispatcher rd = request.getRequestDispatcher("listarHorarioRoteiro.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("listarUsuarioHorarioRoteiro.jsp");
 		rd.forward(request, response);
 	}
 

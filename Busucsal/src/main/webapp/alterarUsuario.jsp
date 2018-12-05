@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@page import="br.ucsal.busucsal.model.Admin"%>
+<%@page import="br.ucsal.busucsal.model.Usuario"%>
 <html>
 <head>
 <meta charset="utf-8">
@@ -18,7 +18,7 @@
 
 <body>
 	<%
-		Admin adminLogin = (Admin) session.getAttribute("adminLogin");
+		Usuario usuarioLogin = (Usuario) session.getAttribute("usuarioLogin");
 	%>
 	<div class="navbar navbar-inverse navbar-static-top">
 		<div class="container">
@@ -34,11 +34,11 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right pt navbar-brand">
-					<li><a href="ListarAdminHorarioRoteiroServlet"> <%
- 	out.print(adminLogin.getNome());
+					<li><a href="ListarUsuarioHorarioRoteiroServlet"> <%
+ 	out.print(usuarioLogin.getNome());
  %>
 					</a></li>
-					<li><a href="LogarAdminServlet">Sair</a></li>
+					<li><a href="LogarUsuarioServlet">Sair</a></li>
 				</ul>
 			</div>
 		</div>
@@ -47,22 +47,23 @@
 	<div id="ww">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 col-lg-offset-4 centered">
+				<div class="col-lg-8 col-lg-offset-2 centered">
 					<div class="table-responsive">
-						<h2>Cadastrar Roteiro</h2>
+						<h2>Alterar Usuário</h2>
 						<br>
-						<form action="CadastrarRoteiroServlet" method="POST">
+						<form action="AlterarUsuarioServlet" method="POST">
+							<input type="hidden" name="id" value="${horario.id}">
 							<div class="form-group">
-								<label>Rota</label> <input class="form-control" type="text"
-									name="rota" />
+								<label>Nome</label> <input class="form-control" type="text"
+									name="nome" value="${horario.nome}" />
 							</div>
 							<div class="form-group">
-								<label>Saída</label> <input class="form-control" type="text"
-									name="saida" />
+								<label>Login</label> <input class="form-control" type="text"
+									name="login" value="${horario.login}" />
 							</div>
 							<div class="form-group">
-								<label>Parada</label> <input class="form-control" type="text"
-									name="parada" />
+								<label>Senha</label> <input class="form-control" type="text"
+									name="senha" value="${horario.senha}" />
 							</div>
 							<button type="submit" class="btn btn-primary">Inserir</button>
 						</form>

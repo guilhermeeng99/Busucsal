@@ -1,4 +1,4 @@
-package br.ucsal.horario.model;
+package br.ucsal.busucsal.model;
 
 public class Horario {
 

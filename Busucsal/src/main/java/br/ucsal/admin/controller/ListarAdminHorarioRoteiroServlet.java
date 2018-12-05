@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.ucsal.horario.dao.HorarioDao;
-import br.ucsal.roteiro.dao.RoteiroDao;
+import br.ucsal.busucsal.dao.HorarioDao;
+import br.ucsal.busucsal.dao.RoteiroDao;
 
 @WebServlet("/ListarAdminHorarioRoteiroServlet")
 public class ListarAdminHorarioRoteiroServlet extends HttpServlet {

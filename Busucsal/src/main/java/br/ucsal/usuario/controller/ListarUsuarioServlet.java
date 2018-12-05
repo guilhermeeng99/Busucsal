@@ -1,4 +1,4 @@
-package br.ucsal.admin.controller;
+package br.ucsal.usuario.controller;
 
 import java.io.IOException;
 
@@ -9,23 +9,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.ucsal.busucsal.dao.AdminDao;
+import br.ucsal.busucsal.dao.UsuarioDao;
 
-@WebServlet("/ListarAdminServlet")
-public class ListarAdminServlet extends HttpServlet {
+@WebServlet("/ListarUsuarioServlet")
+public class ListarUsuarioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public ListarAdminServlet() {
+	public ListarUsuarioServlet() {
 		super();
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		AdminDao adminDao = new AdminDao();
+		UsuarioDao usuarioDao = new UsuarioDao();
 
-			request.setAttribute("admin", adminDao.getLista());
-			RequestDispatcher rd = request.getRequestDispatcher("listarAdmin.jsp");
-			rd.forward(request, response);
+		request.setAttribute("usuario", usuarioDao.getLista());
+		RequestDispatcher rd = request.getRequestDispatcher("perfilUsuario.jsp");
+		rd.forward(request, response);
 
 	}
 

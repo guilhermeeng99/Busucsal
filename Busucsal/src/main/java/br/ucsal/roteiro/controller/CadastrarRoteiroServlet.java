@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.ucsal.roteiro.dao.RoteiroDao;
-import br.ucsal.roteiro.model.Roteiro;
+import br.ucsal.busucsal.dao.RoteiroDao;
+import br.ucsal.busucsal.model.Roteiro;
 
 @WebServlet("/CadastrarRoteiroServlet")
 public class CadastrarRoteiroServlet extends HttpServlet {

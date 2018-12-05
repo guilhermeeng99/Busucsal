@@ -1,4 +1,4 @@
-package br.ucsal.roteiro.model;
+package br.ucsal.busucsal.model;
 
 public class Roteiro {
 

@@ -25,7 +25,7 @@
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.jsp"><img
+				<a class="navbar-brand" href="listarHorarioRoteiroServlet"><img
 					src="assets/img/busucsal_icon.png" alt="Icone Busucsal" height="55"
 					width="55"> Busucsal</a>
 			</div>
@@ -37,11 +37,15 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4 col-lg-offset-4 centered">
-					<ul class="nav navbar-nav pt navbar-brand">
-						<li><a href="LogarUsuarioServlet">Logar Usuário</a></li>
-						<li><a href="cadastrarUsuario.jsp">Cadastrar Usuário</a></li>
-						<li><a href="LogarAdminServlet">Logar Administrador</a></li>
-					</ul>
+					<div class="table-responsive">
+						<h2>Erro ao logar</h2>
+						<h3>Login ou Senha incorretos</h3>
+						<br>
+						<h3>
+							<a href="loginUsuario.jsp">Tentar Novamente</a>
+						</h3>
+					</div>
+
 				</div>
 			</div>
 		</div>

@@ -1,4 +1,4 @@
-package br.ucsal.admin.controller;
+package br.ucsal.usuario.controller;
 
 import java.io.IOException;
 
@@ -10,14 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import br.ucsal.busucsal.dao.AdminDao;
-import br.ucsal.busucsal.model.Admin;
+import br.ucsal.busucsal.dao.UsuarioDao;
+import br.ucsal.busucsal.model.Usuario;
 
-@WebServlet("/AlterarAdminServlet")
-public class AlterarAdminServlet extends HttpServlet {
+@WebServlet("/AlterarUsuarioServlet")
+public class AlterarUsuarioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public AlterarAdminServlet() {
+	public AlterarUsuarioServlet() {
 		super();
 
 	}
@@ -26,13 +26,13 @@ public class AlterarAdminServlet extends HttpServlet {
 
 		String id = req.getParameter("id");
 
-		AdminDao adminDao = new AdminDao();
+		UsuarioDao usuarioDao = new UsuarioDao();
 
-		Admin admin = adminDao.getAdmin(Long.parseLong(id));
+		Usuario usuario = usuarioDao.getUsuario(Long.parseLong(id));
 
 		HttpSession sessao = req.getSession();
-		sessao.setAttribute("adminAntigo", admin);
-		RequestDispatcher rd = req.getRequestDispatcher("alterarAdmin.jsp");
+		sessao.setAttribute("usuarioAntigo", usuario);
+		RequestDispatcher rd = req.getRequestDispatcher("alterarUsuario.jsp");
 		rd.forward(req, resp);
 
 	}
@@ -40,21 +40,21 @@ public class AlterarAdminServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		HttpSession sessao = request.getSession();
-		Admin admin = new Admin();
+		Usuario usuario = new Usuario();
 		
 		String nome = request.getParameter("nome");
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
-		admin.setNome(nome);
-		admin.setLogin(login);
-		admin.setSenha(senha);
-		AdminDao adminDao = new AdminDao();
-		admin.setId(adminDao.getId(admin,(Admin) sessao.getAttribute("adminAntigo")));
-		adminDao.altera(admin);
+		usuario.setNome(nome);
+		usuario.setLogin(login);
+		usuario.setSenha(senha);
+		UsuarioDao usuarioDao = new UsuarioDao();
+		usuario.setId(usuarioDao.getId(usuario,(Usuario) sessao.getAttribute("usuarioAntigo")));
+		usuarioDao.altera(usuario);
 		
-		sessao.setAttribute("adminLogin", admin);
+		sessao.setAttribute("usuarioLogin", usuario);
 
-		response.sendRedirect("/ListarAdminServlet");
+		response.sendRedirect("/ListarUsuarioServlet");
 	}
 
 }

@@ -1,4 +1,4 @@
-package br.ucsal.horario.dao;
+package br.ucsal.busucsal.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.ucsal.horario.model.Horario;
-import br.ucsal.utilis.ConnectionFactory;
+import br.ucsal.busucsal.model.Horario;
+import br.ucsal.busucsal.utilis.ConnectionFactory;
 
 public class HorarioDao {
 

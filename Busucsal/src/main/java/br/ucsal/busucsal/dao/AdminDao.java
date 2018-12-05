@@ -1,4 +1,4 @@
-package br.ucsal.admin.dao;
+package br.ucsal.busucsal.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.ucsal.admin.model.Admin;
-import br.ucsal.utilis.ConnectionFactory;
+import br.ucsal.busucsal.model.Admin;
+import br.ucsal.busucsal.utilis.ConnectionFactory;
 
 public class AdminDao {
 

@@ -1,4 +1,4 @@
-package br.ucsal.admin.model;
+package br.ucsal.busucsal.model;
 
 public class Admin {
 

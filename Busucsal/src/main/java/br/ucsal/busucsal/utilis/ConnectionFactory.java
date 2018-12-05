@@ -1,4 +1,4 @@
-package br.ucsal.utilis;
+package br.ucsal.busucsal.utilis;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -28,6 +28,10 @@ public class ConnectionFactory {
 							+ ");");
 			connection.createStatement()
 			.execute("CREATE TABLE IF NOT EXISTS ADMIN  ( " + "  ID BIGINT IDENTITY PRIMARY KEY,"
+					+ "  NOME VARCHAR(255), LOGIN VARCHAR(255), SENHA VARCHAR(255) "
+					+ ");");
+			connection.createStatement()
+			.execute("CREATE TABLE IF NOT EXISTS USUARIO  ( " + "  ID BIGINT IDENTITY PRIMARY KEY,"
 					+ "  NOME VARCHAR(255), LOGIN VARCHAR(255), SENHA VARCHAR(255) "
 					+ ");");
  		} catch (SQLException | ClassNotFoundException e) {

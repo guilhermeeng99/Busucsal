@@ -1,4 +1,4 @@
-package br.ucsal.admin.controller;
+package br.ucsal.usuario.controller;
 
 import java.io.IOException;
 
@@ -9,14 +9,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import br.ucsal.busucsal.dao.AdminDao;
-import br.ucsal.busucsal.model.Admin;
+import br.ucsal.busucsal.dao.UsuarioDao;
+import br.ucsal.busucsal.model.Usuario;
 
-@WebServlet("/LogarAdminServlet")
-public class LogarAdminServlet extends HttpServlet {
+@WebServlet("/LogarUsuarioServlet")
+public class LogarUsuarioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public LogarAdminServlet() {
+	public LogarUsuarioServlet() {
 		super();
 	}
 
@@ -27,7 +27,7 @@ public class LogarAdminServlet extends HttpServlet {
 			sessao.invalidate();
 
 		}
-		response.sendRedirect("loginAdmin.jsp");
+		response.sendRedirect("loginUsuario.jsp");
 
 	}
 
@@ -36,21 +36,21 @@ public class LogarAdminServlet extends HttpServlet {
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
 
-		Admin admin = new Admin();
-		admin.setLogin(login);
-		admin.setSenha(senha);
+		Usuario usuario = new Usuario();
+		usuario.setLogin(login);
+		usuario.setSenha(senha);
 
-		AdminDao adminDao = new AdminDao();
+		UsuarioDao usuarioDao = new UsuarioDao();
 
-		Admin adminLogin = adminDao.login(admin);
-		if (adminLogin != null) {
+		Usuario usuarioLogin = usuarioDao.login(usuario);
+		if (usuarioLogin != null) {
 			HttpSession sessao = request.getSession();
-			sessao.setAttribute("adminLogin", adminLogin);
-			response.sendRedirect("/ListarAdminHorarioRoteiroServlet");
+			sessao.setAttribute("usuarioLogin", usuarioLogin);
+			response.sendRedirect("/ListarUsuarioHorarioRoteiroServlet");
 
 		} else {
 			request.setAttribute("erro", "Login ou Senha invalidos");
-			request.getRequestDispatcher("erroLoginAdmin.jsp").forward(request, response);
+			request.getRequestDispatcher("erroLoginUsuario.jsp").forward(request, response);
 			;
 		}
 

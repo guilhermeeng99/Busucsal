@@ -1,4 +1,4 @@
-package br.ucsal.roteiro.controller;
+package br.ucsal.usuario.controller;
 
 import java.io.IOException;
 
@@ -9,26 +9,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.ucsal.busucsal.dao.RoteiroDao;
+import br.ucsal.busucsal.dao.UsuarioDao;
 
-@WebServlet("/RemoverRoteiroServlet")
-public class RemoverRoteiroServlet extends HttpServlet {
+@WebServlet("/RemoverUsuarioServlet")
+public class RemoverUsuarioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public RemoverRoteiroServlet() {
+	public RemoverUsuarioServlet() {
 		super();
 
 	}
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		UsuarioDao usuarioDao = new UsuarioDao();
+		usuarioDao.remove(Long.parseLong(req.getParameter("id")));
 
-		String id = req.getParameter("id");
-
-		RoteiroDao roteiroDao = new RoteiroDao();
-
-		roteiroDao.remove(Long.parseLong(id));
-
-		RequestDispatcher rd = req.getRequestDispatcher("/ListarAdminHorarioRoteiroServlet");
+		RequestDispatcher rd = req.getRequestDispatcher("/loginUsuario.jsp");
 		rd.forward(req, resp);
 	}
 }
