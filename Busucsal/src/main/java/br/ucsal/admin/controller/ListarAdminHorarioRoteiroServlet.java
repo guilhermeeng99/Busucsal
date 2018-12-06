@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.ucsal.busucsal.dao.HorarioDao;
 import br.ucsal.busucsal.dao.RoteiroDao;
+import br.ucsal.busucsal.dao.UsuarioDao;
 
 @WebServlet("/ListarAdminHorarioRoteiroServlet")
 public class ListarAdminHorarioRoteiroServlet extends HttpServlet {
@@ -24,7 +25,9 @@ public class ListarAdminHorarioRoteiroServlet extends HttpServlet {
 			throws ServletException, IOException {
 		HorarioDao horarioDao = new HorarioDao();
 		RoteiroDao roteiroDao = new RoteiroDao();
-		
+		UsuarioDao usuarioDao = new UsuarioDao();
+
+		request.setAttribute("usuario", usuarioDao.getLista());
 		request.setAttribute("roteiro", roteiroDao.getLista());
 		request.setAttribute("horario", horarioDao.getLista());
 		RequestDispatcher rd = request.getRequestDispatcher("listarAdminHorarioRoteiro.jsp");

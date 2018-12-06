@@ -74,6 +74,4 @@ INSERT INTO PRODUTO VALUES(26,'A\u00e7\u00e1i de Banana','A\u00e7a\u00ed, Banana
 INSERT INTO LOJAS VALUES(32,'A\u00e7a\u00ed Legal','acailegal@gmail.com','acaiLegal','123','Cabula')
 INSERT INTO ADMIN VALUES(0,'Guilherme','gui','123')
 INSERT INTO USUARIO VALUES(0,'Guilherme','guigapassos@hotmail.com','gui','123','Cabula')
-INSERT INTO USUARIO VALUES(3,'Guilherme U',NULL,'guiU','123',NULL)
-INSERT INTO USUARIO VALUES(4,'Guilherme ok',NULL,'guiO','123',NULL)
 INSERT INTO ROTEIRO VALUES(0,'Rota 1','UCSAL - Pitua\u00e7u','Pernambues')

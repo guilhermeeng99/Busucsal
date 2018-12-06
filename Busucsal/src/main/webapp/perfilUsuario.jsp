@@ -24,11 +24,6 @@
 	<div class="navbar navbar-inverse navbar-static-top">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target=".navbar-collapse">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
 				<a class="navbar-brand" href="ListarUsuarioHorarioRoteiroServlet"><img
 					src="assets/img/busucsal_icon.png" alt="Icone Busucsal" height="55"
 					width="55"> Busucsal</a>
@@ -49,7 +44,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2 centered">
-					<h2>Perfil</h2>
+					<h2>Perfil Usuário</h2>
 					<br>
 					<table>
 						<thead>

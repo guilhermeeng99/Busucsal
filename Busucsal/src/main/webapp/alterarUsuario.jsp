@@ -23,12 +23,7 @@
 	<div class="navbar navbar-inverse navbar-static-top">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target=".navbar-collapse">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="ListarAdminHorarioRoteiroServlet"><img
+				<a class="navbar-brand" href="ListarUsuarioHorarioRoteiroServlet"><img
 					src="assets/img/busucsal_icon.png" alt="Icone Busucsal" height="55"
 					width="55"> Busucsal</a>
 			</div>
@@ -52,18 +47,18 @@
 						<h2>Alterar Usuário</h2>
 						<br>
 						<form action="AlterarUsuarioServlet" method="POST">
-							<input type="hidden" name="id" value="${horario.id}">
+							<input type="hidden" name="id" value="${usuarioLogin.id}">
 							<div class="form-group">
 								<label>Nome</label> <input class="form-control" type="text"
-									name="nome" value="${horario.nome}" />
+									name="nome" value="${usuarioLogin.nome}" />
 							</div>
 							<div class="form-group">
 								<label>Login</label> <input class="form-control" type="text"
-									name="login" value="${horario.login}" />
+									name="login" value="${usuarioLogin.login}" />
 							</div>
 							<div class="form-group">
 								<label>Senha</label> <input class="form-control" type="text"
-									name="senha" value="${horario.senha}" />
+									name="senha" value="${usuarioLogin.senha}" />
 							</div>
 							<button type="submit" class="btn btn-primary">Inserir</button>
 						</form>

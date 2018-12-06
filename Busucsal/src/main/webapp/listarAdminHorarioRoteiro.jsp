@@ -24,11 +24,6 @@
 	<div class="navbar navbar-inverse navbar-static-top">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target=".navbar-collapse">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
 				<a class="navbar-brand" href="ListarAdminHorarioRoteiroServlet"><img
 					src="assets/img/busucsal_icon.png" alt="Icone Busucsal" height="55"
 					width="55"> Busucsal</a>
@@ -104,6 +99,34 @@
 									<td><a href="AlterarRoteiroServlet?id=${r.id}">ALTERAR</a></td>
 									<td><a href="RemoverRoteiroServlet?id=${r.id}">REMOVER</a></td>
 									<td><a href="cadastrarRoteiro.jsp">ADICIONAR</a></td>
+								</tr>
+							</c:forEach>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-lg-8 col-lg-offset-2 centered">
+					<h2>Tabela de Usuários</h2>
+					<br>
+					<table>
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Rota</th>
+								<th>Saída</th>
+								<th>Parada</th>
+								<th>Alterar</th>
+								<th>Remover</th>
+							</tr>
+						<thead>
+						<tbody>
+							<c:forEach var="u" items="${usuario}">
+								<tr>
+									<td>${u.id}</td>
+									<td>${u.nome}</td>
+									<td>${u.login}</td>
+									<td>${u.senha}</td>
+									<td><a href="AlterarUsuarioServlet?id=${r.id}">ALTERAR</a></td>
+									<td><a href="RemoverUsuarioServlet?id=${r.id}">REMOVER</a></td>
 								</tr>
 							</c:forEach>
 						</tbody>

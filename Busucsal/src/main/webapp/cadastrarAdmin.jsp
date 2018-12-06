@@ -19,11 +19,6 @@
 	<div class="navbar navbar-inverse navbar-static-top">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target=".navbar-collapse">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
 				<a class="navbar-brand" href="index.jsp"><img
 					src="assets/img/busucsal_icon.png" alt="Icone Busucsal" height="55"
 					width="55"> Busucsal</a>
@@ -45,8 +40,8 @@
 						<br>
 						<form action="CadastrarAdminServlet" method="POST">
 							<div class="form-group">
-								<label>Nome</label> <input class="form-control"
-									type="text" name="nome" />
+								<label>Nome</label> <input class="form-control" type="text"
+									name="nome" />
 							</div>
 							<div class="form-group">
 								<label>Login</label> <input class="form-control" type="text"
